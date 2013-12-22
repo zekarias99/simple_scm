@@ -8,6 +8,8 @@ class DemoController < ApplicationController
   def hello
   	#render 'index'
   	@array = [1,2,3,4,5]
+  	@id = params['id'].to_i # Parameters are always seen as strings not as integers 
+  	@page =params[:page].to_i
   end
 
   def other_hello
