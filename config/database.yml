@@ -11,10 +11,10 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: #simple_scm_development
+  database: simple_scm_development
   pool: 5
-  username: root
-  password: 12375398AL
+  username: zekarias
+  password: 12375398ML
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
