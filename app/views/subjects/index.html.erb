@@ -1,7 +1,7 @@
 <div class="subjects index">
 	<h2>Sebjects</h2>
 
- <%= link_to("Add New Subject", '#', :class => 'action new') %>
+ <%= link_to("Add New Subject", {:action => 'new'}, :class => 'action new') %>
 
 	<table class="listing" summary="Sublect list">
 		<tr class="header">
@@ -18,7 +18,7 @@
 			<td class="center"><%= subject.visible ? 'Yes' : 'No' %></td>
 			<td class="center"><%= subject.pages.size %></td>
 			<td class="action">
-			  <%= link_to("Show",   '#', :class => 'action show') %>
+			  <%= link_to("Show",    {:action => 'show', :id => subject.id}, :class => 'action show') %>
 			  <%= link_to("Edit",   '#', :class => 'action edit') %>
 			  <%= link_to("Delete", '#', :class => 'action delete') %>
 			</td>
