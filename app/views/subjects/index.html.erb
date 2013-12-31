@@ -1,10 +1,6 @@
-<% if !flash[:notice].blank? %>
-	<div class="notice">
-	  <%= flash[:notice] %>	
-	</div>
-<% end %>
+<% @page_title = "Sebjects" %>
 
-<div class="subjects index">
+<div class="subjects index"> 
 	<h2>Sebjects</h2>
 
  <%= link_to("Add New Subject", {:action => 'new'}, :class => 'action new') %>
