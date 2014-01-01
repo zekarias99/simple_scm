@@ -16,6 +16,9 @@ class DemoController < ApplicationController
   	redirect_to(:controller => 'demo', :action => 'index')
   end
 
+  def text_helper
+  end
+
   def lynda
   	redirect_to('http://lynda.com')
   end
