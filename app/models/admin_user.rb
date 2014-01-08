@@ -1,5 +1,7 @@
 class AdminUser < ActiveRecord::Base
 
+  has_secure_password
+
   # To configure a different table name:
   # self.table_name = "admin_users"
 
