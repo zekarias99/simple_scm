@@ -1,6 +1,9 @@
 SimpleScm::Application.routes.draw do
 
   root 'demo#index'
+
+  get 'admin', :to => "access#index"
+  
   match ':controller(/:action(/:id))', :via => [:get, :post]
   # This is a good practice to
   #get "demo/index"
