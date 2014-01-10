@@ -2,6 +2,8 @@ class AccessController < ApplicationController
 
 	layout 'admin'
 
+	before_action :confirm_logged_in, :ecxept [:login, :attempt_login, :logout]
+
   def index
   	# display text & links
   end
@@ -34,4 +36,5 @@ class AccessController < ApplicationController
   	flash[:notice] = "Logged out"
   	redirect_to(:action => "login")
   end
+
 end
