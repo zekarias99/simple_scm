@@ -36,6 +36,12 @@ class AdminUser < ActiveRecord::Base
                          :confirmation => true
   validate :username_is_allowed
 
+  scope :sorted, lambda { order("last_name ASC, first_name ASC")}
+
+  def name
+    "#{first_name} #{last_name}"
+  end
+
   def username_is_allowed
     if FORBIDDEN_USERNAMES.include?(username) 
        errors.add(:username, "Has been restricted from use.")                         
