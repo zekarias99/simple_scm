@@ -1,6 +1,8 @@
 class PublicController < ApplicationController
 
 	layout 'public'
+
+  before_action :setup_navigation
 	
   def index
   end
@@ -12,5 +14,11 @@ class PublicController < ApplicationController
   	else
   		# display a show content using a show.html 
   	end
+  end
+
+  private
+
+  def setup_navigation
+    @subjects = Subject.visible.sorted
   end
 end
